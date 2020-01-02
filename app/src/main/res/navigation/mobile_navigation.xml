@@ -3,6 +3,11 @@
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools"
 	android:id="@+id/mobile_navigation"
-	app:startDestination="@+id/nav_news">
+	app:startDestination="@+id/loginFragment">
 
+	<fragment
+		android:id="@+id/loginFragment"
+		android:name="com.example.topdealtask.development.LoginFragment"
+		android:label="fragment_login"
+		tools:layout="@layout/fragment_login" />
 </navigation>

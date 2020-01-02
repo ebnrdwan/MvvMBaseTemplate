@@ -4,4 +4,14 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="error_text_color">#fff</color>
+    <color name="bg_green_login">#7C12834E</color>
+    <color name="bg_green_login2">#6D097784</color>
+    <color name="bg_green_login3">#B3097784</color>
+    <color name="bg_round_text">#C5D8DE</color>
+    <color name="facebook_blue">#385C8E</color>
+    <color name="font_color">#C5D8DE</color>
+    <color name="hint_color">#92A3AA</color>
+    <color name="login_editext_error_color">#fff</color>
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
 </resources>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="smallTextView">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/font_color</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textAppearance">@style/Base.TextAppearance.AppCompat.Small</item>
+        <item name="android:textColorHint">@color/hint_color</item>
+    </style>
+
+    <style name="vSmallTextView">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textAppearance">@style/Base.TextAppearance.AppCompat.Caption</item>
+    </style>
+
+    <style name="MeduimTextView">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/font_color</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textAppearance">@style/Base.TextAppearance.AppCompat.Body1</item>
+        <item name="android:textColorHint">@color/hint_color</item>
+    </style>
+
+
+    <style name="semiLargeTextView" parent="BaseArticlestyle">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textAppearance">@style/Base.TextAppearance.AppCompat.Medium</item>
+        <item name="android:textColorHint">@color/font_color</item>
+    </style>
+
+
+    <style name="LargeTextView" parent="BaseArticlestyle">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Display1</item>
+        <item name="android:textColorHint">@color/font_color</item>
+    </style>
+
+    <style name="BaseArticlestyle">
+        <item name="android:gravity">start</item>
+    </style>
+
+
+    <style name="LoginEdiTextStyle">
+        <item name="android:background">@drawable/bg_round_edit_text</item>
+        <item name="android:layout_height">@dimen/item_height_50</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginStart">@dimen/margin_16</item>
+        <item name="android:layout_marginEnd">@dimen/margin_16</item>
+        <item name="android:layout_marginTop">@dimen/margin_8</item>
+        <item name="android:layout_marginBottom">@dimen/margin_8</item>
+        <item name="android:textColorHint">@color/hint_color</item>
+        <item name="android:paddingStart">@dimen/margin_16</item>
+        <item name="android:gravity">center_vertical|start</item>
+        <item name="android:inputType">text</item>
+        <item name="android:textAlignment">viewStart</item>
+    </style>
+
+    <style name="BaseButton">
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="LoginButton" parent="BaseButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/item_height_50</item>
+        <item name="android:layout_marginStart">@dimen/margin_16</item>
+        <item name="android:layout_marginTop">@dimen/margin_8</item>
+        <item name="android:layout_marginEnd">@dimen/margin_16</item>
+        <item name="android:layout_marginBottom">@dimen/margin_8</item>
+    </style>
+</resources>
