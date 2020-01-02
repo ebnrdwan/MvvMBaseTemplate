@@ -1,0 +1,78 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: "androidx.navigation.safeargs"
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId libraries.applicationID
+        minSdkVersion 21
+        targetSdkVersion libraries.targetSdk
+        versionCode libraries.versionCode
+        versionName libraries.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    flavorDimensions "version"
+    productFlavors {
+        production {
+            applicationIdSuffix ".production"
+            versionNameSuffix "-production"
+            dimension "version"
+        }
+        development {
+            applicationIdSuffix ".development"
+            versionNameSuffix "-development"
+            dimension "version"
+        }
+    }
+
+
+    sourceSets {
+        development { java.srcDirs = ['src/development/java'] }
+        production { java.srcDirs = ['src/production/java'] }
+    }
+}
+
+dependencies {
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation libraries.kotlin
+    implementation libraries.androidX
+    implementation libraries.material_design
+    implementation libraries.constraintlayout
+    implementation libraries.navigation_fragment
+    implementation libraries.navigation_fragmentKtx
+    implementation libraries.navigation_UI
+    implementation libraries.navigation_UiKtx
+    implementation libraries.lifecycle
+    implementation libraries.junit
+    implementation libraries.junitx
+    implementation libraries.espressoCore
+    implementation libraries.lottie
+    implementation libraries.retrofit
+    implementation libraries.retrofitRx
+    implementation libraries.retrofitJson
+    implementation libraries.rxKotlin
+    implementation libraries.rxAndroid
+    implementation libraries.picasso
+    implementation libraries.fragmentKtx
+    implementation libraries.dagger
+    implementation libraries.circularImage
+    implementation libraries.circularImage
+    kapt libraries.daggerAnnotation
+    implementation libraries.paging
+
+    implementation(libraries.retrofitLogger) {
+        exclude group: 'org.json', module: 'json'
+    }
+
+}
