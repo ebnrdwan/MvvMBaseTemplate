@@ -1,11 +1,10 @@
-package com.ebnrdwan.devlinktask.data.repository.LoginRepositories
+package com.example.topdealtask.data.repositories
 
 import android.content.Context
-import com.ebnrdwan.devlinktask.data.repository.LoginRepostory.ILoginRepository
-import com.ebnrdwan.devlinktask.data.sources.LoginDataSource.ILoginDataSource
 import com.example.topdealtask.R
 import com.example.topdealtask.data.dto.login.LoginRequest
 import com.example.topdealtask.data.dto.login.SessionModel
+import com.example.topdealtask.data.sources.login.ILoginDataSource
 import com.example.topdealtask.di.MainLoginSource
 import com.example.topdealtask.ui.base.BaseRepository
 import com.example.topdealtask.util.NoInternetException

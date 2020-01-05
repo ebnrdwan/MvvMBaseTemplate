@@ -1,6 +1,5 @@
-package com.ebnrdwan.devlinktask.ui.Login
+package com.example.topdealtask.ui.login
 import com.example.topdealtask.di.FragmentScope
-import com.example.topdealtask.ui.login.LoginFragment
 import dagger.Subcomponent
 
 @FragmentScope

@@ -7,6 +7,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.topdealtask.R
+import com.example.topdealtask.data.models.FormState
 import com.example.topdealtask.data.models.UiState
 import com.example.topdealtask.ui.ApplicationController
 import com.example.topdealtask.ui.base.BaseFragment
@@ -28,7 +29,7 @@ class LoginFragment : BaseFragment() {
     private val viewModel by activityViewModels<LoginViewModel> { viewModelFactory }
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        compositeDisposable = CompositeDisposable()
+
         activity?.let {
             (it.application as ApplicationController)
                 .appComponent.registerLoginComponent()
@@ -41,6 +42,7 @@ class LoginFragment : BaseFragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        compositeDisposable = CompositeDisposable()
         setListeners()
         attachObservers()
     }
@@ -149,19 +151,7 @@ class LoginFragment : BaseFragment() {
             .observeOn(AndroidSchedulers.mainThread())
             .map {
                 viewModel.isPasswordValid(it)
-            }.subscribe {
-                it.observe(viewLifecycleOwner, Observer { state ->
-                    when (state) {
-                        is FormState.VALID -> {
-                            setPasswordStatus(false)
-                        }
-                        else -> {
-                            setPasswordStatus(true, state.message)
-                        }
-                    }
-                })
-
-            })
+            }.subscribe ())
     }
 
     private fun observeOnPasswordTextField() {

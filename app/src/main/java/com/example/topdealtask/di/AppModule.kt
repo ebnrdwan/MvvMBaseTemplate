@@ -1,6 +1,5 @@
 package com.example.topdealtask.di
 
-import com.example.topdealtask.di.NetworkModule
 import dagger.Module
 
 @Module(

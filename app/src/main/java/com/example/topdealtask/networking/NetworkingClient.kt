@@ -1,12 +1,11 @@
 package com.example.topdealtask.networking
 
-import com.example.topdealtask.util.Constants
 import com.example.topdealtask.BuildConfig
+import com.example.topdealtask.util.Constants
 import com.ihsanbal.logging.Level
 import com.ihsanbal.logging.LoggingInterceptor
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
-import okhttp3.Response
 import okhttp3.internal.platform.Platform
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory

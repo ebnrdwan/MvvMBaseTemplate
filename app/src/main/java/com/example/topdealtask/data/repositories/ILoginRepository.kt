@@ -1,4 +1,4 @@
-package com.ebnrdwan.devlinktask.data.repository.LoginRepostory
+package com.example.topdealtask.data.repositories
 
 
 import com.example.topdealtask.data.dto.login.LoginRequest

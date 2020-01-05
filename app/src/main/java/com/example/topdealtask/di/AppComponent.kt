@@ -1,7 +1,7 @@
 package com.example.topdealtask.di
 
 import android.app.Application
-import com.ebnrdwan.devlinktask.ui.Login.Loginubcomponent
+import com.example.topdealtask.ui.login.Loginubcomponent
 import com.example.topdealtask.ui.main.MainActivity
 import dagger.BindsInstance
 import dagger.Component
