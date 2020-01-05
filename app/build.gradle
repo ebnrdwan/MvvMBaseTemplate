@@ -68,7 +68,7 @@ dependencies {
     implementation libraries.dagger
     implementation libraries.circularImage
     implementation libraries.circularImage
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.jakewharton.rxbinding3:rxbinding:3.1.0'
     kapt libraries.daggerAnnotation
     implementation libraries.paging
 

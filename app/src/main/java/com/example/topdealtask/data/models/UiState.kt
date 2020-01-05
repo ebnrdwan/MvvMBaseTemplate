@@ -1,6 +1,8 @@
 package com.example.topdealtask.data.models
 
 import com.example.topdealtask.R
+import com.example.topdealtask.data.dto.BaseModel
+import com.example.topdealtask.data.dto.login.SessionModel
 
 
 sealed class UiState {
@@ -19,6 +21,11 @@ sealed class UiState {
 
     }
 
+    sealed class Loaded<out T : BaseModel>(val result: T) : UiState() {
+        sealed class loginResult(data: SessionModel) : Loaded<SessionModel>(data)
+    }
+
+
     object ERROR : UiState() {
         override var message: Int = R.string.no_internet
 
@@ -33,5 +40,4 @@ sealed class UiState {
         override var message: Int = R.string.no_internet
 
     }
-
 }

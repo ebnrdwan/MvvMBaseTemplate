@@ -215,5 +215,5 @@ fun View.hide() {
 }
 
 fun View.show() {
-    this.fade()
+    visibility = View.VISIBLE
 }

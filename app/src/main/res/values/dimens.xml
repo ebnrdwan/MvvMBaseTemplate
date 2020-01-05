@@ -28,6 +28,7 @@
 	<dimen name="circle_img_border_width">1dp</dimen>
 	<dimen name="divider_height">1dp</dimen>
 	<dimen name="divider_width">1dp</dimen>
-	
+	<dimen name="margin_24">24dp</dimen>
+
 
 </resources>

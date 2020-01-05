@@ -6,6 +6,7 @@ import com.ihsanbal.logging.LoggingInterceptor
 import dagger.Module
 import dagger.Provides
 import dagger.Reusable
+import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import javax.inject.Singleton
@@ -24,12 +25,20 @@ object NetworkModule {
 
     @Singleton
     @Provides
-    fun provideLoggingInterceptor(): LoggingInterceptor = NetworkingClient.provideLoggingInterceptor()
+    fun provideLoggingInterceptor(): LoggingInterceptor =
+        NetworkingClient.provideLoggingInterceptor()
 
     @Singleton
     @Provides
-    fun provideHttpClient(loggingInterceptor: LoggingInterceptor): OkHttpClient =
-        NetworkingClient.provideHttpClient(loggingInterceptor)
+    fun provideHeaderInterceptor(): Interceptor = NetworkingClient.provideHeaderInterceptor()
+
+    @Singleton
+    @Provides
+    fun provideHttpClient(
+        loggingInterceptor: LoggingInterceptor,
+        headers: Interceptor
+    ): OkHttpClient =
+        NetworkingClient.provideHttpClient(loggingInterceptor, headers)
 
 
     @Singleton

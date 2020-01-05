@@ -25,7 +25,7 @@
     </style>
 
 
-    <style name="semiLargeTextView" parent="BaseArticlestyle">
+    <style name="semiLargeTextView" parent="BaseLogintyle">
         <item name="android:textColor">@android:color/white</item>
         <item name="android:fontFamily">sans-serif</item>
         <item name="android:textAppearance">@style/Base.TextAppearance.AppCompat.Medium</item>
@@ -33,14 +33,14 @@
     </style>
 
 
-    <style name="LargeTextView" parent="BaseArticlestyle">
+    <style name="LargeTextView" parent="BaseLogintyle">
         <item name="android:textColor">@android:color/white</item>
         <item name="android:fontFamily">sans-serif</item>
         <item name="android:textAppearance">@style/TextAppearance.AppCompat.Display1</item>
         <item name="android:textColorHint">@color/font_color</item>
     </style>
 
-    <style name="BaseArticlestyle">
+    <style name="BaseLogintyle">
         <item name="android:gravity">start</item>
     </style>
 

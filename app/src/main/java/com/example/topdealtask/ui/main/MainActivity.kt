@@ -5,7 +5,6 @@ import com.example.topdealtask.R
 class MainActivity : BaseActivity() {
     override fun getLayout(): Int = R.layout.activity_main
 
-
     override fun initializeScreenComponents() {
     }
 

@@ -7,6 +7,9 @@ class Constants {
         const val API_REQUEST_TAG = "API_REQUEST:->"
         const val API_RESPONSE_TAG = "API_RESPONSE:->"
         const val APP_VERSION_TAG = "APP_FLAVOR:->"
+        const val Accept_Language = "Accept-Language"
+        const val Content_Type = "Content-Type"
+        const val Json = "application/json"
     }
 
     object Logging {
@@ -17,8 +20,15 @@ class Constants {
         const val RX_TAG_SUPSCRIBE = "RX_COMPLETE"
     }
 
+    object RxEditTextConstants {
+        const val SKIP = 1.toLong()
+        const val DEBOUNCE = 300.toLong()
+
+    }
+
     object Animations {
         const val Duration: Long = 500
+        const val Short_Duration: Long = 200
         const val Delay: Long = 500
         const val XLeftStart: Float = -500f
         const val XRightStart: Float = 500f
