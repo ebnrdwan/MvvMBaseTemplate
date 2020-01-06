@@ -1,14 +1,14 @@
 package com.example.topdealtask.ui.login
 
 import androidx.lifecycle.ViewModel
-import com.example.topdealtask.data.repositories.LoginRepository
-import com.example.topdealtask.data.repositories.ILoginRepository
-import com.example.topdealtask.data.sources.login.LoginDataSource
+import com.example.topdealtask.data.repositories.login.ILoginRepository
+import com.example.topdealtask.data.repositories.login.LoginRepository
 import com.example.topdealtask.data.sources.login.ILoginDataSource
+import com.example.topdealtask.data.sources.login.LoginDataSource
 import com.example.topdealtask.di.FragmentScope
 import com.example.topdealtask.di.MainLoginSource
 import com.example.topdealtask.di.ViewModelKey
-import com.example.topdealtask.networking.LoginApi
+import com.example.topdealtask.networking.login.LoginApi
 import dagger.Binds
 import dagger.Module
 import dagger.Provides

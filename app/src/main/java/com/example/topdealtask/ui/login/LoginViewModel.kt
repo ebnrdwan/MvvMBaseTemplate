@@ -1,11 +1,10 @@
 package com.example.topdealtask.ui.login
-
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.example.topdealtask.data.repositories.ILoginRepository
+import com.example.topdealtask.data.repositories.login.ILoginRepository
 import com.example.topdealtask.R
 import com.example.topdealtask.data.dto.login.LoginRequest
-import com.example.topdealtask.data.dto.login.SessionModel
+import com.example.topdealtask.data.dto.login.LoginResponse
 import com.example.topdealtask.data.models.FormState
 import com.example.topdealtask.data.models.UiState
 import com.example.topdealtask.ui.base.BaseViewModel
@@ -28,14 +27,14 @@ class LoginViewModel @Inject constructor(private val LoginRepository: ILoginRepo
     private val _passwordFormState = MutableLiveData<FormState>()
     private val _mailInput = MutableLiveData<String>()
     private val _passwordInput = MutableLiveData<String>()
-    private val _sessionModel = MutableLiveData<SessionModel>()
+    private val _sessionModel = MutableLiveData<LoginResponse>()
 
 
     fun getUiStateModel(): LiveData<UiState> {
         return _uiStatModel
     }
 
-    fun getSessionModel(): LiveData<SessionModel> {
+    fun getSessionModel(): LiveData<LoginResponse> {
         return _sessionModel
     }
 
@@ -105,7 +104,7 @@ class LoginViewModel @Inject constructor(private val LoginRepository: ILoginRepo
     }
 
 
-    private fun Observable<SessionModel>.subscribeLogin(): Disposable {
+    private fun Observable<LoginResponse>.subscribeLogin(): Disposable {
         return this.subscribe({
             _sessionModel.value = it
             _uiStatModel.value = UiState.SUCCESS

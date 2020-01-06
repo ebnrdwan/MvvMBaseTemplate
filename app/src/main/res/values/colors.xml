@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorAccent">#008577</color>
     <color name="error_text_color">#fff</color>
     <color name="bg_green_login">#7C12834E</color>
     <color name="bg_green_login2">#6D097784</color>
@@ -10,9 +10,12 @@
     <color name="bg_round_text">#C5D8DE</color>
     <color name="facebook_blue">#385C8E</color>
     <color name="font_color">#C5D8DE</color>
+    <color name="dark_font_color">#646565</color>
     <color name="hint_color">#92A3AA</color>
     <color name="login_editext_error_color">#C5D8DE</color>
     <color name="white">#fff</color>
     <color name="black">#000</color>
     <color name="black_transparent">#27000000</color>
+    <color name="bg_toolbar">#F9F9F9</color>
+    <color name="bg_divider_trans45">#74008577</color>
 </resources>

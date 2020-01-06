@@ -3,6 +3,7 @@ package com.example.topdealtask.di
 import android.app.Application
 import com.example.topdealtask.ui.login.Loginubcomponent
 import com.example.topdealtask.ui.main.MainActivity
+import com.example.topdealtask.ui.register.RegisterSubcomponent
 import dagger.BindsInstance
 import dagger.Component
 
@@ -21,6 +22,8 @@ interface AppComponent {
 
     fun inject(mainActivity: MainActivity)
     fun registerLoginComponent(): Loginubcomponent.Factory
+    fun registerSubComponent(): RegisterSubcomponent.Factory
+
 }
 
 

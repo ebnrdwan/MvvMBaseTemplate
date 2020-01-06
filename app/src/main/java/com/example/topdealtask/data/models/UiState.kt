@@ -2,7 +2,7 @@ package com.example.topdealtask.data.models
 
 import com.example.topdealtask.R
 import com.example.topdealtask.data.dto.BaseModel
-import com.example.topdealtask.data.dto.login.SessionModel
+import com.example.topdealtask.data.dto.login.LoginResponse
 
 
 sealed class UiState {
@@ -22,7 +22,7 @@ sealed class UiState {
     }
 
     sealed class Loaded<out T : BaseModel>(val result: T) : UiState() {
-        sealed class loginResult(data: SessionModel) : Loaded<SessionModel>(data)
+        sealed class loginResult(data: LoginResponse) : Loaded<LoginResponse>(data)
     }
 
 

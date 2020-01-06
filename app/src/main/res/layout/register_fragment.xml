@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_register"
+    android:fillViewport="true"
+    tools:context="com.example.topdealtask.ui.register.RegisterFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_view"
+        android:paddingBottom="@dimen/margin_8"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/top_toolbar"
+            layout="@layout/toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleImageView"
+            android:layout_width="@dimen/iv_80"
+            android:layout_height="@dimen/iv_80"
+            android:layout_marginTop="28dp"
+            android:src="@drawable/ic_add_img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/top_toolbar" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:text="@string/upload_picture"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/circleImageView" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_fullName"
+            style="@style/inputLayout"
+            android:hint="@string/full_name"
+            app:hintTextAppearance="@style/inputLayoutTextStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ed_fullName"
+                style="@style/registerEditTextStyle" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_mail"
+            style="@style/inputLayout"
+            android:hint="@string/email"
+            app:hintTextAppearance="@style/inputLayoutTextStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_fullName"
+            tools:layout_editor_absoluteY="215dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ed_mail"
+                style="@style/registerEditTextStyle"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_password"
+            style="@style/inputLayout"
+            android:hint="@string/password"
+            app:hintTextAppearance="@style/inputLayoutTextStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_mail"
+            tools:layout_editor_absoluteY="215dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ed_password"
+                style="@style/registerEditTextStyle"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_confPassword"
+            style="@style/inputLayout"
+            android:hint="@string/conf_password"
+            app:hintTextAppearance="@style/inputLayoutTextStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_password"
+            tools:layout_editor_absoluteY="215dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ed_confPassword"
+                style="@style/registerEditTextStyle"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/tv_country_label"
+            style="@style/labelStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/country"
+            app:layout_constraintEnd_toStartOf="@+id/tv_country_value"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_confPassword" />
+
+        <TextView
+            android:id="@+id/tv_country_value"
+            style="@style/valueStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="@string/select_country"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_country_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tv_country_label"
+            app:layout_constraintTop_toTopOf="@+id/tv_country_label" />
+
+        <View
+            android:id="@+id/country_divider"
+            style="@style/dividerStyle"
+            android:background="@color/bg_divider_trans45"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_country_label" />
+
+
+        <TextView
+            android:id="@+id/tv_city_label"
+            style="@style/labelStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/city"
+            app:layout_constraintEnd_toStartOf="@+id/tv_city_value"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/country_divider" />
+
+        <TextView
+            android:id="@+id/tv_city_value"
+            style="@style/valueStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="@string/select_city"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_city_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tv_city_label"
+            app:layout_constraintTop_toTopOf="@+id/tv_city_label" />
+
+        <View
+            android:id="@+id/city_divider"
+            style="@style/dividerStyle"
+            android:background="@color/bg_divider_trans45"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_city_label" />
+
+
+        <TextView
+            android:id="@+id/tv_additional_info"
+            style="@style/valueStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_16"
+            android:text="@string/additional_info"
+            android:textColor="@color/hint_color"
+            app:layout_constraintTop_toBottomOf="@id/city_divider" />
+
+
+        <TextView
+            android:id="@+id/tv_gender_label"
+            style="@style/labelStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/city"
+            app:layout_constraintEnd_toStartOf="@+id/tv_gender_value"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_additional_info" />
+
+        <TextView
+            android:id="@+id/tv_gender_value"
+            style="@style/valueStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="@string/select_city"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_gender_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tv_gender_label"
+            app:layout_constraintTop_toTopOf="@+id/tv_gender_label" />
+
+        <View
+            android:id="@+id/gender_divider"
+            style="@style/dividerStyle"
+            android:background="@color/bg_divider_trans45"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_gender_label" />
+
+
+        <TextView
+            android:id="@+id/tv_bio_label"
+            style="@style/labelStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_16"
+            android:text="@string/bio"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gender_divider" />
+
+
+        <EditText
+            android:id="@+id/tv_bio_value"
+            style="@style/registerEditTextStyle"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_4"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:hint="@string/bio_hint"
+            android:textColor="@color/dark_font_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_bio_label" />
+
+
+        <TextView
+            android:id="@+id/terms_conditions"
+            style="@style/valueStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_16"
+            android:gravity="center"
+            android:text="@string/terms_of_condition"
+            app:layout_constraintTop_toBottomOf="@id/tv_bio_value" />
+
+        <Button
+            android:id="@+id/btn_register"
+            style="@style/LoginButton"
+            android:background="@drawable/bg_round_edit_text"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:text="@string/create_account"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/terms_conditions" />
+
+        <include layout="@layout/loading_layout" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

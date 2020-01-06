@@ -1,8 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:app="http://schemas.android.com/apk/res-auto"
-	android:id="@+id/toolbar"
-	android:layout_width="match_parent"
-	android:layout_height="?attr/actionBarSize"
-	android:background="?attr/colorPrimary"
-	app:popupTheme="@style/AppTheme.PopupOverlay" />
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/bg_toolbar"
+    android:elevation="@dimen/margin_4"
+    app:popupTheme="@style/AppTheme.PopupOverlay">
+
+    <ImageView
+        android:layout_width="@dimen/icon_20"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:src="@drawable/ic_back" />
+
+    <ImageView
+        android:layout_width="@dimen/iv_80"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_app_icon" />
+</androidx.appcompat.widget.Toolbar>
